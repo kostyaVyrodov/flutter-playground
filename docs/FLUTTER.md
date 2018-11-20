@@ -1,5 +1,7 @@
 # Notes about flutter framework
 
+Some notes written during watching the ["Learn Flutter"](https://www.udemy.com/learn-flutter-dart-to-build-ios-android-apps/) course
+
 ## About widgets
 
 Everything is a widget in flutter. A widget may render UI or may contain only some logic. A flutter application is a Widget tree.

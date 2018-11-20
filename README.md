@@ -1,6 +1,4 @@
-# Flutter course
-
-Some notes written during watching the ["Learn Flutter"](https://www.udemy.com/learn-flutter-dart-to-build-ios-android-apps/) course
+# Flutter and dart playground
 
 ## Getting started with Flutter
 
