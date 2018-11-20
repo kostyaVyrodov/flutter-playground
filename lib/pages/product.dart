@@ -28,8 +28,8 @@ class ProductPage extends StatelessWidget {
               child: RaisedButton(
                 color: Theme.of(context).accentColor,
                 textColor: Colors.white,
-                child: Text("BACK"),
-                onPressed: () => Navigator.pop(context),
+                child: Text("DELETE"),
+                onPressed: () => Navigator.pop(context, true),
               ),
             ),
           ],
