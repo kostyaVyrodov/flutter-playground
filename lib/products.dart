@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'pages/product.dart';
+
 class Products extends StatelessWidget {
   // final means - created once, changed never
   final List<String> products;
@@ -23,6 +25,18 @@ class Products extends StatelessWidget {
               children: [
                 Image.asset('assets/food.jpg'),
                 Text(products[index]),
+                ButtonBar(
+                  alignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    FlatButton(
+                      child: Text('Details'),
+                      onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProductPage())),
+                    )
+                  ],
+                )
               ],
             ),
           );
