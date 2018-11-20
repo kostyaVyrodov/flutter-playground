@@ -8,7 +8,7 @@ Everything is a widget in flutter. A widget may render UI or may contain only so
 
 Init state is passing with constructor during creation of a widget
 
-### State<T>
+### State<T> type
 
 TBD
 
@@ -20,7 +20,7 @@ Input Data -> Widget + Internal state -> Renders UI
 
 Data can changed externally and it gets rerendered when Input Data changes OR local state changes
 
-#### Lifecycle
+#### StatefullWidget lifecycle
 
 ```constructor()``` - function initiating a type
 
@@ -34,17 +34,40 @@ Data can changed externally and it gets rerendered when Input Data changes OR lo
 
 ### StatelessWidget
 
-#### Working flow
+#### StatelessWidget working flow
 
 Input Data -> Widget -> Renders UI
 
 Data can changed externally and it gets rerendered when Input Data changes
 
-#### Lifecycle
+#### StatelessWidget lifecycle
 
 ```constructor()``` - function initiating a type
 
 ```build()``` - called before drawing something on the screen. Can be called multiple times before very receiving data.
+
+## Debugging Flutter Apps
+
+The snippet bellow allow draw additional lines around controls to see theirs paddings, margins and sizes. Also it does some additional logic.
+
+```dart
+
+import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+
+import 'product_manager.dart';
+
+main() {
+  // Draws lines around controls
+  debugPaintSizeEnabled = true;
+  // Draws baseline of a text
+  debugPaintBaselinesEnabled = true;
+  // Indicates where tap event occurred
+  debugPaintPointersEnabled = true;
+  runApp(MyApp());
+}
+
+```
 
 ## Some notes
 
