@@ -8,6 +8,21 @@ Everything is a widget in flutter. A widget may render UI or may contain only so
 
 Init state is passing with constructor during creation of a widget
 
+### Lists
+
+ListView widget renders everything at once, even if you have 10K items, all of them will be rendered. ListView is better to use when a list doesn't change its size and it's not big
+
+ListView.builder is used to render dynamic lists. Works similar to RecylcerView in Android
+
+```dart
+
+ListView.builder(
+  itemBuilder: (BuildContext context, int index) {},
+  itemCount: <int>,
+)
+
+```
+
 ### State<T> type
 
 TBD
