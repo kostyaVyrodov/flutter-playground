@@ -4,7 +4,7 @@ import 'pages/product.dart';
 
 class Products extends StatelessWidget {
   // final means - created once, changed never
-  final List<String> products;
+  final List<Map<String, String>> products;
 
   Products(this.products) {
     print('[Products Widget] Contructor');
@@ -24,16 +24,20 @@ class Products extends StatelessWidget {
             child: Column(
               children: [
                 Image.asset('assets/food.jpg'),
-                Text(products[index]),
+                Text(products[index]['title']),
                 ButtonBar(
                   alignment: MainAxisAlignment.center,
                   children: <Widget>[
                     FlatButton(
                       child: Text('Details'),
                       onPressed: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ProductPage())),
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ProductPage(
+                                  products[index]['imageUrl'],
+                                  products[index]['title']),
+                            ),
+                          ),
                     )
                   ],
                 )
