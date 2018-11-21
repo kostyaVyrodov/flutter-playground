@@ -2,7 +2,7 @@
 
 Some notes written during watching the ["Learn Flutter"](https://www.udemy.com/learn-flutter-dart-to-build-ios-android-apps/) course
 
-## About widgets
+## Widgets
 
 Everything is a widget in flutter. A widget may render UI or may contain only some logic. A flutter application is a Widget tree.
 
@@ -83,6 +83,33 @@ main() {
 }
 
 ```
+
+## Navigation
+
+```Navigator``` type is responsible of application navigation
+
+```Navigator.pop(context, <extra arg>);``` allows to close current page
+
+The code bellow allows open a page
+
+```dart
+
+Navigator.push<bool>(
+  context,
+  MaterialPageRoute(
+    builder: (context) => ProductPage(
+        products[index]['imageUrl'],
+        products[index]['title']),
+  ),
+).then((bool value) {
+  if (value) {
+    deleteProduct(index);
+  }
+});
+
+```
+
+```WillPopScope``` allows to intercept clicking on hardware back button (Android)
 
 ## Some notes
 
