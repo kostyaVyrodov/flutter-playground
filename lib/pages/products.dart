@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'pages/product.dart';
+import 'product.dart';
 
-class Products extends StatelessWidget {
+class ProductsPage extends StatelessWidget {
   // final means - created once, changed never
   final List<Map<String, String>> products;
   final Function deleteProduct;
 
-  Products(this.products, {this.deleteProduct}) {
+  ProductsPage(this.products, {this.deleteProduct}) {
     print('[Products Widget] Contructor');
   }
 

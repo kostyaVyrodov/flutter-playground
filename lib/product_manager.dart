@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './products.dart';
+import './pages/products.dart';
 import './product_control.dart';
 
 class ProductManager extends StatefulWidget {
@@ -58,7 +58,7 @@ class _ProductManagerState extends State<ProductManager> {
           margin: EdgeInsets.all(10.0),
         ),
         Expanded(
-          child: Products(_products, deleteProduct: _deleteProduct),
+          child: ProductsPage(_products, deleteProduct: _deleteProduct),
         ),
       ],
     );
