@@ -111,7 +111,10 @@ Navigator.push<bool>(
 
 ```WillPopScope``` allows to intercept clicking on hardware back button (Android)
 
+```Navigator.pushReplacement``` opens a new page and closes current one
+
 ## Some notes
 
 - Private classes are named with underscore in the beginning
 - Flutter always calls 'build' when draws something on the screen the build always returns another widget
+- A mixin is a calls we merged with another class

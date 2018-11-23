@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 
-class ProductControll extends StatelessWidget {
-  // A type for stroing a function (similar to delegate)
+class ProductControl extends StatelessWidget {
   final Function addProduct;
 
-  ProductControll(this.addProduct);
+  ProductControl(this.addProduct);
 
   @override
-  Widget build(BuildContext context) {
-    return RaisedButton(
-      color: Theme.of(context).primaryColor,
-      onPressed: () {
-        addProduct({'title': 'Sweets', 'imageUrl': 'assets/food.jpg'});
-      },
-      child: Text('Add product'),
-    );
-  }
+    Widget build(BuildContext context) {
+      return RaisedButton(
+            color: Theme.of(context).primaryColor,
+            onPressed: () {
+              addProduct({'title': 'Chocolate', 'image': 'assets/food.jpg'});
+            },
+            child: Text('Add Product'),
+          );
+    }
 }

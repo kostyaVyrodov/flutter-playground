@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './pages/products.dart';
+import './products.dart';
 import './product_control.dart';
 
 class ProductManager extends StatefulWidget {
@@ -20,12 +20,12 @@ class ProductManager extends StatefulWidget {
 class _ProductManagerState extends State<ProductManager> {
   List<Map<String, String>> _products = [];
 
+  @override
   void initState() {
     print('[ProductManager State] initState()');
     if (widget.startingProduct != null) {
       _products.add(widget.startingProduct);
     }
-
     super.initState();
   }
 
@@ -35,11 +35,11 @@ class _ProductManagerState extends State<ProductManager> {
     super.didUpdateWidget(oldWidget);
   }
 
-  void _addProduct(Map product) {
+  void _addProduct(Map<String, String> product) {
     setState(() {
       _products.add(product);
-      print(_products);
     });
+    print(_products);
   }
 
   void _deleteProduct(int index) {
@@ -54,12 +54,10 @@ class _ProductManagerState extends State<ProductManager> {
     return Column(
       children: [
         Container(
-          child: ProductControll(_addProduct),
           margin: EdgeInsets.all(10.0),
+          child: ProductControl(_addProduct),
         ),
-        Expanded(
-          child: ProductsPage(_products, deleteProduct: _deleteProduct),
-        ),
+        Expanded(child: Products(_products, deleteProduct: _deleteProduct))
       ],
     );
   }
