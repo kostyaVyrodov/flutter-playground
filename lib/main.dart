@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_course/pages/product.dart';
-import 'package:flutter_course/pages/product_admin.dart';
-import 'package:flutter_course/pages/products.dart';
 // import 'package:flutter/rendering.dart';
+
+import './pages/auth.dart';
+import './pages/products_admin.dart';
+import './pages/products.dart';
+import './pages/product.dart';
 
 void main() {
   // debugPaintSizeEnabled = true;
@@ -46,14 +48,13 @@ class _MyAppState extends State<MyApp> {
       routes: {
         '/': (BuildContext context) =>
             ProductsPage(_products, _addProduct, _deleteProduct),
-        '/admin': (BuildContext context) => ProductAdmin(),
+        '/admin': (BuildContext context) => ProductsAdminPage(),
       },
       onGenerateRoute: (RouteSettings settings) {
         final List<String> pathElements = settings.name.split('/');
         if (pathElements[0] != '') {
           return null;
         }
-
         if (pathElements[1] == 'product') {
           final int index = int.parse(pathElements[2]);
           return MaterialPageRoute<bool>(

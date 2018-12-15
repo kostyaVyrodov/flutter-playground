@@ -9,7 +9,7 @@ class ProductManager extends StatelessWidget {
   final Function deleteProduct;
 
   ProductManager(this.products, this.addProduct, this.deleteProduct);
-
+  
   @override
   Widget build(BuildContext context) {
     print('[ProductManager State] build()');
